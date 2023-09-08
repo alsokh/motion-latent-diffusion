@@ -104,7 +104,14 @@ class Text2MotionDataset(data.Dataset):
             except:
                 # Some motion may not exist in KIT dataset
                 pass
+        # to test the errors
+        #'''
+        print(id_list)
+        print(split_file)
+        print(name_list, length_list)
+        #'''
 
+        
         name_list, length_list = zip(
             *sorted(zip(new_name_list, length_list), key=lambda x: x[1]))
 
